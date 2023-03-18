@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "184d4ea8-c0a1-48a7-acf5-81993ec90891",
+		"name": "CurrencyExchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AllCurrencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/:currency/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"currency",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewCurrency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/currency?code=HUF&fullname=Hungarian forint&sign=Ft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"currency"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "HUF"
+						},
+						{
+							"key": "fullname",
+							"value": "Hungarian forint"
+						},
+						{
+							"key": "sign",
+							"value": "Ft"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostWithMis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/currency?code=RU&fullname=Russian ruble&sign=P",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"currency"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "RU"
+						},
+						{
+							"key": "fullname",
+							"value": "Russian ruble"
+						},
+						{
+							"key": "sign",
+							"value": "P"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USDget",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/currency/USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"currency",
+						"USD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllExchanges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/exchange/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USDJPYexchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/exchange/USDJPY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange",
+						"USDJPY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newExchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/exchange?basecode=USD&targetcode=HUF&rate=11.2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange"
+					],
+					"query": [
+						{
+							"key": "basecode",
+							"value": "USD"
+						},
+						{
+							"key": "targetcode",
+							"value": "HUF"
+						},
+						{
+							"key": "rate",
+							"value": "11.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExchageFromTO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://94.250.250.130:8080/exchange?from=USD&to=HUF&amount=10.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "USD"
+						},
+						{
+							"key": "to",
+							"value": "HUF"
+						},
+						{
+							"key": "amount",
+							"value": "10.0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
