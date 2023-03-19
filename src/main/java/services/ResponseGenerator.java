@@ -17,7 +17,7 @@ public class ResponseGenerator {
 
     public void generateResponse(Service exeService) throws IOException {
         String answer = exeService.execute(req);
-        if (answer.isEmpty()) {
+        if (answer.contains("{\"value\":{\"id\":0}}")) {
             resp.sendError(404, "Валюта не найдена");
         } else {
             resp.setContentType("application/json");
