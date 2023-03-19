@@ -9,12 +9,13 @@ import java.net.URISyntaxException;
 
 public class FindExchangeRateService implements Service{
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest req) {
         Gson gson = new Gson();
-                /*new GsonBuilder()
-                .excludeFieldsWithoutExposeAnnotation()
-                .create();*/
-        String path = (request.getRequestURI()).substring(27);
+        /*new GsonBuilder()
+        .excludeFieldsWithoutExposeAnnotation()
+        .create();*/
+        String requestURI = req.getRequestURI();
+        String path = requestURI.substring(requestURI.lastIndexOf('/') + 1);
         try {
             ExchangeRateRepository exCRR = new ExchangeRateRepository();
             String baseCode = path.substring(0, 3);

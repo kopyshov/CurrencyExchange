@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class CalculateExchangeRateService implements Service{
     @Override
-    public String execute(HttpServletRequest request) {
-        Map<String, String[]> parameterMap = request.getParameterMap();
+    public String execute(HttpServletRequest req) {
+        Map<String, String[]> parameterMap = req.getParameterMap();
         String[] froms = parameterMap.get("from");
         String from = froms[0];
 

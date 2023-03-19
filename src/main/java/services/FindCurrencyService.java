@@ -10,8 +10,9 @@ import static java.lang.Integer.parseInt;
 
 public class FindCurrencyService implements Service{
     @Override
-    public String execute(HttpServletRequest request) {
-        String path = (request.getRequestURI()).substring(27);
+    public String execute(HttpServletRequest req) {
+        String requestURI = req.getRequestURI();
+        String path = requestURI.substring(requestURI.lastIndexOf('/') + 1);
         CurrencyRepository currencyRepository = null;
         try {
             currencyRepository = new CurrencyRepository();
