@@ -1,6 +1,5 @@
 package servlets;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,10 +28,9 @@ public class CurrenciesServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
             responseGenerator = new ResponseGenerator(req, resp);
-            super.doGet(req, resp);
             exeService = new AllCurrenciesService();
             responseGenerator.generateResponse(exeService);
         } catch (IOException ex) { //Почему необходимо прописать Exception в 2 местах?
@@ -42,10 +40,9 @@ public class CurrenciesServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         responseGenerator = new ResponseGenerator(req, resp);
         try {
-            super.doPost(req, resp);
             req.setCharacterEncoding("UTF-8");
             String code = req.getParameter("code");
             String fullName = req.getParameter("fullName");

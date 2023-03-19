@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/:currency/all",
+					"raw": "http://localhost:8080/currencies",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -117,7 +117,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/exchange/all",
+					"raw": "http://localhost:8080/exchangeRates",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -137,7 +137,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/exchange/USDJPY",
+					"raw": "http://localhost:8080/exchangeRate/USDJPY",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -157,7 +157,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/exchange?basecode=USD&targetcode=HUF&rate=11.2",
+					"raw": "http://localhost:8080/exchangeRate?basecode=USD&targetcode=HUF&rate=11.2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -190,7 +190,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/exchange?from=USD&to=HUF&amount=10.0",
+					"raw": "http://localhost:8080/exchangeRate?from=USD&to=HUF&amount=10.0",
 					"protocol": "http",
 					"host": [
 						"localhost"

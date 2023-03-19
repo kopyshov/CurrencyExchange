@@ -4,13 +4,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import repositories.CurrencyRepository;
 import services.FindCurrencyService;
 import services.ResponseGenerator;
 import services.Service;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 @WebServlet(urlPatterns = {"/currency/*"})
 public class CurrencyServlet extends HttpServlet {

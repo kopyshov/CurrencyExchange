@@ -1,15 +1,15 @@
 package servlets;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import repositories.ExchangeRateRepository;
 import services.AllExchangeRateService;
 import services.ResponseGenerator;
 import services.Service;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 @WebServlet(urlPatterns = {"/exchangeRates/*"})
 public class ExchangeRatesServlet extends HttpServlet {
