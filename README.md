@@ -10,6 +10,7 @@
 ![JSON](https://img.shields.io/badge/json-black?style=for-the-badge&labelColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-black?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+![Postman](https://img.shields.io/badge/postman-black?style=for-the-badge&logo=postman&logoColor=white)
 
 ## Содержание
 - [О проекте](#о-проекте)
