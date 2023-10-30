@@ -10,6 +10,14 @@
 ![JSON](https://img.shields.io/badge/json-black?style=for-the-badge&labelColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-black?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+
+## Содержание
+- [О проекте](#о-проекте)
+- [Требования](#требования)
+- [Запуск приложения](#запуск-приложения)
+- [Создание war-файла](#создание-war-файла)
+- [Использование приложения](#использование-приложения)
+
 ### О проекте
 REST API для описания валют и обменных курсов. Позволяет просматривать и редактировать списки валют и обменных курсов, и совершать расчёт конвертации произвольных сумм из одной валюты в другую. Веб-интерфейс для проекта не подразумевается.
 
