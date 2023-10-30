@@ -1,4 +1,10 @@
 package model;
 
-public record Currency(int id, String code, String fullName, String sign) {
+import com.google.gson.annotations.SerializedName;
+
+public record Currency(int id,
+                       String code,
+                       @SerializedName("full_name")
+                       String fullName,
+                       String sign) {
 }
