@@ -26,6 +26,7 @@ jobs:
           file: "./target/*.war"
           overwrite: true
   deploy:
+     needs: build
      runs-on: ubuntu-latest
      steps:
           - name: clone repo
@@ -35,6 +36,4 @@ jobs:
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command: |
-		              cd /home/tomcat/webapps/
-                  wget https://github.com/kopyshov/CurrencyExchange/releases/download/untagged-703e0c2a0da879aff69b/currency.war
-                
+	      	cd /home
