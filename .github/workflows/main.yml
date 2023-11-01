@@ -25,3 +25,16 @@ jobs:
         with:
           file: "./target/*.war"
           overwrite: true
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
+          - name: clone repo
+            uses: nekiro/ssh-job@main
+            with:
+              host: ${{ secrets.HOST }}
+              user: ${{ secrets.USER }}
+              password: ${{ secrets.PASSWORD }}
+              command: |
+		              cd /home/tomcat/webapps/
+                  wget https://github.com/kopyshov/CurrencyExchange/releases/download/untagged-703e0c2a0da879aff69b/currency.war
+                
