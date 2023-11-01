@@ -31,5 +31,5 @@ jobs:
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command: |
-                cd /home/tomcat/
+                cd /home/tomcat/webapps
                 wget https://api.github.com/repos/kopyshov/CurrencyExchange/releases/latest -O - | awk -F \" -v RS="," '/browser_download_url/ {print $(NF-1)}' | xargs wget
