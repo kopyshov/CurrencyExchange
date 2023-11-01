@@ -23,12 +23,12 @@ jobs:
   deploy:
      runs-on: ubuntu-latest
      steps:
-          - name: SSH Command
-            uses: D3rHase/ssh-command-action@v0.2.2
+          - name: create-directory
+            uses: nekiro/ssh-job@main
             with:
-              host: ${{secrets.HOST}} # Remote server address / ip - required
-              user: ${{secrets.USER}} # Remote server user - required
-              private_key: ${{secrets.PRIVATE_KEY}} # Private ssh key registered on the remote server - required
-              host_fingerprint: ${{secrets.HOST_FINGERPRINT}} # Public ssh key fingerprint, viewable via ssh-keyscan -H $HOST -p $PORT - optional
-              command: mkdir -p /home/repo/newdir
+              host: ${{ secrets.HOST }}
+              user: ${{ secrets.USER }}
+              password: ${{ secrets.PASSWORD }}
+              command: |
+                mkdir -p /home/repo/newdir
               
