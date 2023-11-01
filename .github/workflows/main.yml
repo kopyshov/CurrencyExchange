@@ -28,7 +28,7 @@ jobs:
             with:
               host: ${{ secrets.HOST }}
               user: ${{ secrets.USER }}
-              key: ${{ secrets.PUBLIC_KEY }}
+              password: ${{ secrets.PASSWORD }}
               command: |
                 mkdir -p /home/repo/newdir
               
