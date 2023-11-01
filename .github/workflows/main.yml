@@ -35,8 +35,12 @@ jobs:
                 git init
                 git clone https://github.com/kopyshov/CurrencyExchange.git
           - name: package
-            run: |
+            uses: nekiro/ssh-job@main
+            with:
+              host: ${{ secrets.HOST }}
+              user: ${{ secrets.USER }}
+              password: ${{ secrets.PASSWORD }}
+              command:
                 sudo chmod +x /home/repo/CurrencyExchange/mvnw
                 /home/repo/CurrencyExchange/mvnw tomkat:deploy
                 cp /target/*.war /home/tomcat/webapps
-              
