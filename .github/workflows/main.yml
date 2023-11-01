@@ -25,10 +25,15 @@ jobs:
         with:
           file: "./target/*.war"
           overwrite: true
-      - uses: nekiro/ssh-job@main
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create-directory
+	uses: nekiro/ssh-job@main
 	with:
 	  host: ${{ secrets.HOST }}
+   	  key: ${{ secrets.KEY }}
 	  user: ${{ secrets.USER }}
-	  password: ${{ secrets.PASSWORD }}
-	  command: |
-	    cd /home/tomcat
+	    command: |
+	      ls
+	      mkdir dir
