@@ -34,7 +34,10 @@ jobs:
                 rm -rf /home/repo/*
                 git init
                 git clone https://github.com/kopyshov/CurrencyExchange.git
-          - name: package
+  package: 
+    runs-on: ubuntu-latest
+    steps:
+          - name: deploypack
             uses: nekiro/ssh-job@main
             with:
               host: ${{ secrets.HOST }}
