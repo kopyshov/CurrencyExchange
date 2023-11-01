@@ -48,4 +48,5 @@ jobs:
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command: |
+                cd /home/repo
                 ./mvnw package
