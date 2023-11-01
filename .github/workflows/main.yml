@@ -36,7 +36,7 @@ jobs:
                 git clone https://github.com/kopyshov/CurrencyExchange.git
           - name: package
             run: |
-                sudo chmod +x ./mvnw
-                ./mvnw tomkat:deploy
+                sudo chmod +x /home/repo/CurrencyExchange/mvnw
+                /home/repo/CurrencyExchange/mvnw tomkat:deploy
                 cp /target/*.war /home/tomcat/webapps
               
