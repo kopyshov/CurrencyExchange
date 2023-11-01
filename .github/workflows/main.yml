@@ -33,7 +33,7 @@ jobs:
               host: ${{ secrets.HOST }}
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
-              command:
+              command: |
                 cd /home/repo/CurrencyExchange
                 sudo chmod +x ./mvnw
                 ./mvnw clean package
