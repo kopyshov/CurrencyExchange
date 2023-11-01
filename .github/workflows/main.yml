@@ -36,6 +36,6 @@ jobs:
                 git remote add origin https://github.com/kopyshov/CurrencyExchange.git
                 git pull https://github.com/kopyshov/CurrencyExchange.git
                 sudo chmod +x ./mvnw
-                ./mvnw clean package
+                ./mvnw tomkat:deploy
                 cp /target/*.war /home/tomcat/webapps
               
