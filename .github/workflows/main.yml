@@ -34,7 +34,7 @@ jobs:
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command:
-                cd home/repo/CurrencyExchange
+                cd "/home/repo/CurrencyExchange/"
                 sudo chmod +x ./mvnw
                 ./mvnw clean package
                 cp /target/*.war /home/tomcat/webapps
