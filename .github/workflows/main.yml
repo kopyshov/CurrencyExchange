@@ -9,19 +9,7 @@ on:
       - 'master'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-      - name: Maven Package
-        run: mvn -B clean package -DskipTests
   deploy:
-     needs: build
      runs-on: ubuntu-latest
      steps:
           - name: clone repo
@@ -47,5 +35,5 @@ jobs:
               password: ${{ secrets.PASSWORD }}
               command:
                 sudo chmod +x /home/repo/CurrencyExchange/mvnw
-                /home/repo/CurrencyExchange/mvnw tomkat:deploy
+                /home/repo/CurrencyExchange/mvnw clean package
                 cp /target/*.war /home/tomcat/webapps
