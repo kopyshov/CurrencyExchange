@@ -49,4 +49,4 @@ jobs:
               password: ${{ secrets.PASSWORD }}
               command: |
                 cd /home/repo
-                ./mvnw package
+                mvn package
