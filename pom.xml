@@ -43,6 +43,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
+                  <configuration>
+                           <fork>true</fork>
+                           <executable>/opt/jdk17/bin/javac</executable>
+                  </configuration>
             </plugin>
         </plugins>
     </build>
