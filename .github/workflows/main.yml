@@ -23,7 +23,7 @@ jobs:
   deploy:
      runs-on: ubuntu-latest
      steps:
-          - name: pull war and deploy
+          - name: clone repo
             uses: nekiro/ssh-job@main
             with:
               host: ${{ secrets.HOST }}
@@ -34,6 +34,9 @@ jobs:
                 rm -rf /home/repo/*
                 git init
                 git clone https://github.com/kopyshov/CurrencyExchange.git
+                    - name: clone repo
+          - name: package
+            run: |
                 sudo chmod +x ./mvnw
                 ./mvnw tomkat:deploy
                 cp /target/*.war /home/tomcat/webapps
