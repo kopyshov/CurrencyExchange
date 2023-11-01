@@ -34,7 +34,6 @@ jobs:
                 rm -rf /home/repo/*
                 git init
                 git clone https://github.com/kopyshov/CurrencyExchange.git
-                    - name: clone repo
           - name: package
             run: |
                 sudo chmod +x ./mvnw
