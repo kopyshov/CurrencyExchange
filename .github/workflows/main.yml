@@ -24,5 +24,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           file: "./target/*.war"
-          tags: true
           overwrite: true
