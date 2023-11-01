@@ -37,5 +37,5 @@ jobs:
               command: |
                 cd /home/repo/
                 chmod +x ./mvnw
-                ./mvnw clean package
+                ./mvnw package
                 cp /target/*.war /home/tomcat/webapps
