@@ -29,11 +29,11 @@ jobs:
      needs: build
      runs-on: ubuntu-latest
      steps:
-          - name: clone repo
-            uses: nekiro/ssh-job@main
-            with:
+        - name: clone repo
+          uses: nekiro/ssh-job@main
+          with:
               host: ${{ secrets.HOST }}
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command: |
-	      	cd /home
+	      	cd /home/
