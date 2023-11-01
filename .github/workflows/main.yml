@@ -25,15 +25,10 @@ jobs:
         with:
           file: "./target/*.war"
           overwrite: true
-  deploy:
-     needs: build
-     runs-on: ubuntu-latest
-     steps:
-        - name: clone repo
-          uses: nekiro/ssh-job@main
-          with:
-              host: ${{ secrets.HOST }}
-              user: ${{ secrets.USER }}
-              password: ${{ secrets.PASSWORD }}
-              command: |
-	      	cd /home/
+      - uses: nekiro/ssh-job@main
+	with:
+	  host: ${{ secrets.HOST }}
+	  user: ${{ secrets.USER }}
+	  password: ${{ secrets.PASSWORD }}
+	  command: |
+	    cd /home/tomcat
