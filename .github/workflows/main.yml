@@ -31,6 +31,7 @@ jobs:
               password: ${{ secrets.PASSWORD }}
               command: |
                 cd /home/repo
+                rm -rf /home/repo/*
                 git init
                 git remote add origin https://github.com/kopyshov/CurrencyExchange.git
                 git pull https://github.com/kopyshov/CurrencyExchange.git
