@@ -22,7 +22,8 @@ jobs:
                 cd /home/repo
                 rm -rf /home/repo/*
                 git init
-                git clone https://github.com/kopyshov/CurrencyExchange.git
+                git add remote https://github.com/kopyshov/CurrencyExchange.git
+                git pull https://github.com/kopyshov/CurrencyExchange.git
   package:
     needs: deploy
     runs-on: ubuntu-latest
@@ -34,7 +35,7 @@ jobs:
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASSWORD }}
               command: |
-                cd /home/repo/CurrencyExchange
-                sudo chmod +x ./mvnw
-                ./mvnw clean package install
+                cd /home/repo/
+                chmod +x ./mvnw
+                ./mvnw clean package
                 cp /target/*.war /home/tomcat/webapps
