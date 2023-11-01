@@ -24,11 +24,11 @@ jobs:
                 git init
                 git remote add origin https://github.com/kopyshov/CurrencyExchange.git
                 git pull https://github.com/kopyshov/CurrencyExchange.git
-  package:
+  package1:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-          - name: deploypack
+          - name: deploypack1
             uses: nekiro/ssh-job@main
             with:
               host: ${{ secrets.HOST }}
@@ -37,5 +37,15 @@ jobs:
               command: |
                 cd /home/repo/
                 chmod +x ./mvnw
+  package2:
+    needs: package1
+    runs-on: ubuntu-latest
+    steps:
+          - name: deploypack2
+            uses: nekiro/ssh-job@main
+            with:
+              host: ${{ secrets.HOST }}
+              user: ${{ secrets.USER }}
+              password: ${{ secrets.PASSWORD }}
+              command: |
                 ./mvnw package
-                cp /target/*.war /home/tomcat/webapps
